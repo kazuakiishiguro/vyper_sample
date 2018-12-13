@@ -1,0 +1,20 @@
+{
+  "name": "vyper_practie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:sol": "truffle compile",
+    "build:vyper": "truper",
+    "build": "npm run build:sol && run build:vyper",
+    "console": "truffle console",
+    "migrate:ganache": "truffle migrate --network ganache",
+    "migrate:miannet": "truffle migrate --networl mainnet",
+    "test": "truffle test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "truffle-hdwallet-provider": "0.0.6"
+  }
+}
