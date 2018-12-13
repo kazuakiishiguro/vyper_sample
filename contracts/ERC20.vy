@@ -49,10 +49,12 @@ def transferFrom(_from : address, _to : address, _value : uint256(wei)) -> bool:
     allowance: uint256(wei) = self.allowances[_from][_sender]
     self.balances[_from] = self.balances[_from] - _value
     self.balances[_to] = self.balances[_to] + _value
-    self.allowances[_from][_sender] = self.allowances - _value
+    self.allowances[_from][_sender] = allowance - _value
+    log.Transfer(_from, _to, _value)
+    return True
     
 @public
-def approve(_sender : address, _value : uint256(wei)) -> bool:
+def approve(_spender : address, _value : uint256(wei)) -> bool:
     _sender: address = msg.sender
     self.allowances[_sender][_spender] = _value
     log.Approval(_sender, _spender, _value)
