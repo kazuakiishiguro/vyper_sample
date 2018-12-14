@@ -1,0 +1,1 @@
+[{"name": "register", "outputs": [], "inputs": [{"type": "bytes", "name": "name"}, {"type": "address", "name": "owner"}], "constant": false, "payable": false, "type": "function", "gas": 36094}, {"name": "lookup", "outputs": [{"type": "address", "name": "out"}], "inputs": [{"type": "bytes", "name": "name"}], "constant": true, "payable": false, "type": "function", "gas": 846}]
